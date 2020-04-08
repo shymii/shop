@@ -1,10 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Home from '../views/Home'
+import Dogs from '../views/Dogs'
+import Cats from '../views/Cats'
+import Contact from '../views/Contact'
+import Cart from '../views/Cart'
+import Search from '../views/Search'
 
 Vue.use(VueRouter)
 
   const routes = [
-
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/dogs',
+      name: 'Dogs',
+      component: Dogs
+    },
+    {
+      path: '/cats',
+      name: 'Cats',
+      component: Cats
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
+    }
 ]
 
 const router = new VueRouter({
