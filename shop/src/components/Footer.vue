@@ -1,18 +1,23 @@
 <template>
     <footer>
-        <nav class="footer-nav">
-            <ul class="footer-nav-list">
-                <li class="footer-nav-list-item">Home</li>
-                <li class="footer-nav-list-item">Dogs</li>
-                <li class="footer-nav-list-item">Contact</li>
-                <li class="footer-nav-list-item">Cats</li>
-            </ul>
-        </nav>
         <div class="footer-contact">
-            <p>email</p>
-            <p>number</p>
+            <div class="working-hours">
+                <p class="open">we're open</p>
+                <p>monday: 9:00-17:00</p>
+                <p>tuesday: 9:00-15:00</p>
+                <p>wednesday: 8:00-14:00</p>
+                <p>friday: 10:00-14:00</p>
+            </div>
+            <div class="socials">
+                <p class="mail">contact us at</p>
+                <p>email: pjeski@pjeski.corp</p>
+                <p>instagram: @pjeski</p>
+                <p>facebook: fb.com/prsink</p>
+            </div>
         </div>
-        <p class="footer-copy">copyright &copy; pjeski 2020</p>
+        <div class="footer-copy">
+            <p>copyright &copy; pjeski 2020</p>
+        </div>
     </footer>
 </template>
 
@@ -24,28 +29,44 @@ export default {
 
 <style lang="scss" scoped>
 footer{
-    height: 8em;
+    margin-top: 4em;
     background-color: #eee;
-    display: flex;
-    flex-wrap: wrap;
-    .footer-nav{
-        flex-basis: 70%;
-        ul{
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            
-            li{
-                flex-basis: 50%;
+    padding: 1em 0;
+    .footer-contact{
+        margin-left: 2em;
+        padding-top: .5em;
+        p{
+            padding-left: .3em;
+            padding-top: .3em;
+            font-family: 'Raleway', sans-serif;
+        }
+        .working-hours{
+            .open{
+                padding-left: 0;
+                width: 10%;
+                border-bottom: 1px solid #707070;
             }
         }
-    }
-    .footer-contact{
-        flex-basis: 30%;
+        .socials{
+            margin-top: .5em;
+            .mail{
+                padding-left: 0;
+                width: 10%;
+                border-bottom: 1px solid #707070;
+            }
+        }  
     }
     .footer-copy{
-        text-align: center;
-        flex-basis: 100%;
+        margin-top: .5em;
+        margin-left: 2em;
+        padding-top: .5em;
+        padding-left: .3em;
+        border-top: 1px solid #707070;
+        width: 20%;
+        text-align: left;      
+        p{
+            font-family: 'Raleway', sans-serif;
+        }
     }
 }
 </style>
