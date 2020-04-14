@@ -1,60 +1,59 @@
 <template>
 	<main id="home">
-		<div class="banner">
+		<section class="banner">
 			<figure class="banner-img">
 				<img src="../assets/a.png" alt="banner image">
 			</figure>
-		</div>
-		<p class="promo-para">SUPER PROMO GET NOW AS FAST AS POSSIBLE!!!!!!!!!</p>
-		<div class="promo-items">
-			<div class="item">
-				<router-link to="/">
-					<figure class="item-img">
-						<img src="../assets/1.png" alt="">
-					</figure>
-					<div class="item-name">
-						<p class="name">Helo</p>
-						<p class="price">$12</p>
-					</div>
-				</router-link>
+		</section>
+		<section class="promo">
+			<p class="promo-para">SUPER PROMO GET NOW AS FAST AS POSSIBLE!!!!!!!!!</p>
+			<div class="promo-items">
+				<div class="item">
+					<router-link to="/product">
+						<figure class="item-img">
+							<img src="../assets/1.png" alt="">
+						</figure>
+						<div class="item-name">
+							<p class="name">Helo</p>
+							<p class="price">$12</p>
+						</div>
+					</router-link>
+				</div>
+				<div class="item">
+					<router-link to="/product">
+						<figure class="item-img">
+							<img src="../assets/1.png" alt="">
+						</figure>
+						<div class="item-name">
+							<p class="name">Helo</p>
+							<p class="price">$12</p>
+						</div>
+					</router-link>
+				</div>
+				<div class="item">
+					<router-link to="/product">
+						<figure class="item-img">
+							<img src="../assets/1.png" alt="">
+						</figure>
+						<div class="item-name">
+							<p class="name">Helo</p>
+							<p class="price">$12</p>
+						</div>
+					</router-link>
+				</div>
 			</div>
-			<div class="item">
-				<router-link to="/">
-					<figure class="item-img">
-						<img src="../assets/1.png" alt="">
-					</figure>
-					<div class="item-name">
-						<p class="name">Helo</p>
-						<p class="price">$12</p>
-					</div>
-				</router-link>
-			</div>
-			<div class="item">
-				<router-link to="/">
-					<figure class="item-img">
-						<img src="../assets/1.png" alt="">
-					</figure>
-					<div class="item-name">
-						<p class="name">Helo</p>
-						<p class="price">$12</p>
-					</div>
-				</router-link>
-			</div>
-		</div>
-		<div class="about">
+		</section>
+		<section class="about">
 			<p class="about-title">About p j e s k i</p>
 			<p class="about-text">So basically we're a company that sells some stuff for animals u know :)</p>
-		</div>
+		</section>
 	</main>
 </template>
 
 <script>
 export default {
-
-	data(){
-		return{
-			
-		}
+	mounted(){
+		window.scrollTo(top)
 	}
 }
 </script>
@@ -74,12 +73,12 @@ export default {
 	.promo-items{
 		display: flex;
 		justify-content: space-around;
-		a{
-			display: block;
-			text-decoration: none;
-		}
 		.item{
 			flex-basis: 20%;
+			a{
+				display: block;
+				text-decoration: none;
+			}
 			.item-img{
 				img{
 					max-width: 100%;

@@ -5,7 +5,7 @@ import Dogs from '../views/Dogs'
 import Cats from '../views/Cats'
 import Contact from '../views/Contact'
 import Cart from '../views/Cart'
-import Search from '../views/Search'
+import Product from '../views/Product'
 
 Vue.use(VueRouter)
 
@@ -36,9 +36,9 @@ Vue.use(VueRouter)
       component: Cart
     },
     {
-      path: '/search',
-      name: 'Search',
-      component: Search
+      path: '/product',
+      name: 'Product',
+      component: Product
     }
 ]
 

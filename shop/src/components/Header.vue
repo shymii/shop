@@ -22,6 +22,17 @@ export default {
             search: '',
             numInCart: 0
         }
+    },
+    mounted(){
+        this.$root.$on('AddingCart', (x) => {
+            this.numInCart += x
+        })
+        this.$root.$on('CartEmpty', (x) => {
+            this.numInCart = x
+        })
+    },
+    updated(){
+        this.$root.$emit('CartAdded', this.numInCart)
     }
 }
 </script>
@@ -62,7 +73,7 @@ font-family: 'Raleway', sans-serif;
                     border-bottom: 2px solid #eee;
                     transition: .5s;
                     &:hover{
-                        border-color: #7dbbdd;
+                        border-color: #EDB270;
                     }
                 }
             }
