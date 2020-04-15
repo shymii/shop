@@ -71,6 +71,7 @@ export default {
 				if(this.cartItems[i].id == x){
 					this.totalprice -= this.cartItems[i].price*this.cartItems[i].quant
 					this.cartItems.splice(i, 1)
+					this.$root.$emit('ItemDeleted', 1)
 				}
 			}
 		},

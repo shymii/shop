@@ -30,6 +30,9 @@ export default {
         this.$root.$on('CartEmpty', (x) => {
             this.numInCart = x
         })
+        this.$root.$on('ItemDeleted', (x) => {
+            this.numInCart -= x
+        })
     },
     updated(){
         this.$root.$emit('CartAdded', this.numInCart)
