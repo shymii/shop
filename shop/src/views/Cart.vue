@@ -55,10 +55,11 @@ export default {
 	},
 	beforeMount(){
 		this.$root.$on('CartAdded', (x) => {
-			this.cartItemsNum = x
-			for(let i=0;i<=x-1;i++){
-				this.cartItems[i] = {name: 'item_name', price: 12, quant: 1, size: 'small', id: i}
-				this.totalprice += 12
+			this.totalprice = 0
+			this.cartItemsNum = x.number
+			for(let i=0;i<=x.number-1;i++){
+				this.cartItems[i] = {name: 'item_name', price: 12, quant: x.items[i].quant, size: x.items[i].size, id: x.items[i].id}
+				this.totalprice += this.cartItems[i].price*this.cartItems[i].quant
 			}
 		})
 	},
@@ -67,11 +68,10 @@ export default {
 	},
 	methods: {
 		delItem(x){
-			for(let i=0; i<=this.cartItems.length; i++){
+			for(let i=0; i<=this.cartItems.length-1; i++){
 				if(this.cartItems[i].id == x){
-					this.totalprice -= this.cartItems[i].price*this.cartItems[i].quant
+					this.$root.$emit('ItemDeleted', this.cartItems[i].id)
 					this.cartItems.splice(i, 1)
-					this.$root.$emit('ItemDeleted', 1)
 				}
 			}
 		},

@@ -20,22 +20,31 @@ export default {
     data(){
         return{
             search: '',
-            numInCart: 0
+            numInCart: 0,
+            items: [],
+            i: 0
         }
     },
     mounted(){
         this.$root.$on('AddingCart', (x) => {
-            this.numInCart += x
+            this.items[this.numInCart] = {size: x.size, quant: x.quant, id: this.i}
+            this.numInCart += 1
+            this.i++
         })
         this.$root.$on('CartEmpty', (x) => {
             this.numInCart = x
         })
         this.$root.$on('ItemDeleted', (x) => {
-            this.numInCart -= x
+            this.numInCart -= 1
+            for(let i=0; i<=this.items.length-1; i++){
+                if(this.items[i].id == x){
+                    this.items.splice(i, 1)
+                }
+            }
         })
     },
     updated(){
-        this.$root.$emit('CartAdded', this.numInCart)
+        this.$root.$emit('CartAdded', {number: this.numInCart, items: this.items})
     }
 }
 </script>

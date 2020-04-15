@@ -72,14 +72,14 @@
 export default {
     data(){
         return{
-            size: null,
-            quant: null
+            size: 'small',
+            quant: 1
         }
     },
     methods: {
         goToCart(){
             this.$router.push({name: 'Cart'})
-            this.$root.$emit('AddingCart', 1)
+            this.$root.$emit('AddingCart', {size: this.size, quant: parseInt(this.quant)})
         }
     },
     mounted(){

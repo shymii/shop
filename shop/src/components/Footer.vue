@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="footer-contact">
+        <section class="footer-contact">
             <div class="working-hours">
                 <p class="open">we're open</p>
                 <p>monday: 9:00-17:00</p>
@@ -14,10 +14,10 @@
                 <p>instagram: @pjeski</p>
                 <p>facebook: fb.com/prsink</p>
             </div>
-        </div>
-        <div class="footer-copy">
+        </section>
+        <section class="footer-copy">
             <p>copyright &copy; pjeski 2020</p>
-        </div>
+        </section>
     </footer>
 </template>
 

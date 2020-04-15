@@ -1,12 +1,12 @@
 <template>
     <main id="contact">
-        <div class="contact-form">
+        <section class="contact-form">
             <h2>Contact</h2>
             <input type="text" class="name-input" placeholder="name" v-model="name">
             <input type="text" class="email-input" placeholder="email" v-model="email">
             <textarea class="question-input" cols="60" rows="10" placeholder="your question" v-model="question"></textarea>
             <button class="btn-conf" @click="sendForm()">SEND</button>
-        </div>
+        </section>
         <div :class="cont">
             <p>Thc for submitting the form {{form.name}}! We'll reach to you as fast as possible!</p>
             <figure class="icon" @click="closeConf()">
