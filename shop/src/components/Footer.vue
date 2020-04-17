@@ -128,7 +128,8 @@ footer{
     .footer-copy{
         flex-basis: 100%;
         margin-top: .5em;
-        margin-left: 2em;
+        margin-left: 4em;
+        margin-right: 4em;
         padding-top: .5em;
         padding-left: .3em;
         border-top: 1px solid #707070;

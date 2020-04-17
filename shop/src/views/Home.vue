@@ -64,8 +64,16 @@ export default {
 	margin: auto;
 	padding: 2em;
 	text-align: center;
+	.banner{
+		width: 100%;
+		figure{
+			img{
+				max-width: 100%;
+			}
+		}
+	}
 	.promo-para{
-		margin: 4em 0;
+		margin: 2em 0;
 		font-size: 35px;
 		color: #FF0000;
 		font-family: 'Raleway', sans-serif;
