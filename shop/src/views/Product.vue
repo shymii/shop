@@ -7,9 +7,8 @@
             <div class="main-item-details">
                 <h3 class="main-item-name">Item_name</h3>
                 <p class="main-item-price">$12</p>
-                <p class="main-item-desc">description<br>
-                description<br>
-                description</p>
+                <p class="main-item-desc">Ye ye cool doggo u got here!<br>
+                Imagine having a doggo like this lmao</p>
                 <div class="item-shopping">
                     <div class="size">
                         <label for="size-sel">size</label>
@@ -104,6 +103,7 @@ export default {
         }
         .main-item-details{
             padding: 3em 0;
+            padding-left: 10em;
             flex-basis: 50%;
             h3, p, label, input, button, option, select{
                 font-family: 'Raleway', sans-serif;
@@ -151,7 +151,7 @@ export default {
         }
     }
     .recommendations-para{
-		margin: 4em 0;
+		margin: 2em 0;
 		font-size: 35px;
 		color: #FF0000;
 		font-family: 'Raleway', sans-serif;
