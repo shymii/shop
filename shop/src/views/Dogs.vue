@@ -98,6 +98,11 @@ export default {
 	flex-wrap: wrap;
 	.banner{
 		flex-basis: 100%;
+		figure{
+			img{
+				max-width: 100%;
+			}
+		}
 	}
 	.title{
 		flex-basis: 100%;

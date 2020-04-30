@@ -10,6 +10,9 @@
             </ul>
         </nav>
         <div class="header-cart">
+            <div class="search-box">
+                <input type="text" placeholder="search" v-model="search"><figure class="search" @click="searchGo()"><img src="../assets/search.png" alt="search"></figure>
+            </div>
             <router-link to="/cart" class="header-cart-text">Cart ({{numInCart}})</router-link>
         </div>
     </header>
@@ -23,6 +26,12 @@ export default {
             numInCart: 0,
             items: [],
             i: 0
+        }
+    },
+    methods: {
+        searchGo(){
+            console.log(this.search)
+            //xD
         }
     },
     mounted(){
@@ -96,6 +105,31 @@ font-family: 'Raleway', sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
+        .search-box{
+            display: flex;
+            &:hover{
+                cursor: pointer;
+            }
+            input{
+                width: 60%;
+                padding: .2em;
+                border: none;
+                border-bottom: 1px solid #707070;
+                background: none;
+                outline: none;
+                &::placeholder{
+                    color: #707070;
+                }
+            }
+            figure{
+                margin-left: .5em;
+                height: 100%;
+                img{
+                    display: block;
+                    max-height: 22px;
+                }
+            }
+        }
         .header-cart-text{
             text-decoration: none;
             padding: .3em .8em;
