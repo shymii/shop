@@ -7,9 +7,46 @@
 		</section>
 		<h3 class="title">Cats items</h3>
 		<aside class="filters">
-			<p>Filters</p>
+			<p class="filters-head">Filters</p>
+			<p>yes</p>
+			<p>no</p>
+			<p>yes</p>
+			<p>no</p>
 		</aside>
 		<section class="items">
+			<div class="item">
+				<router-link to="/product">
+					<figure class="item-img">
+						<img src="../assets/1.png" alt="">
+					</figure>
+					<div class="item-name">
+						<p class="name">Helo</p>
+						<p class="price">$12</p>
+					</div>
+				</router-link>
+			</div>
+			<div class="item">
+				<router-link to="/product">
+					<figure class="item-img">
+						<img src="../assets/1.png" alt="">
+					</figure>
+					<div class="item-name">
+						<p class="name">Helo</p>
+						<p class="price">$12</p>
+					</div>
+				</router-link>
+			</div>
+			<div class="item">
+				<router-link to="/product">
+					<figure class="item-img">
+						<img src="../assets/1.png" alt="">
+					</figure>
+					<div class="item-name">
+						<p class="name">Helo</p>
+						<p class="price">$12</p>
+					</div>
+				</router-link>
+			</div>
 			<div class="item">
 				<router-link to="/product">
 					<figure class="item-img">
@@ -110,14 +147,19 @@ export default {
 		text-align: center;
 		font-size: 2em;
 		font-family: 'Raleway', sans-serif;
-		padding: 4em;
+		padding: 2em;
 	}
 	.filters{
 		flex-basis: 20%;
 		border-right: 1px solid #707070;
-		p{
+		p {
+			font-family: 'Raleway', sans-serif;
+			padding: .5em 0;
+		}
+		.filters-head{
 			font-family: 'Raleway', sans-serif;
 			font-size: 1.5em;
+			padding: 0;
 		}
 	}
 	.items{

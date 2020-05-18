@@ -30,8 +30,7 @@ export default {
     },
     methods: {
         searchGo(){
-            console.log(this.search)
-            //xD
+            this.$router.push({name: 'Search'})
         }
     },
     mounted(){
